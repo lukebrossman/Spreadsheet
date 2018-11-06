@@ -35,6 +35,11 @@ namespace Cpts321
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
 
+        public void TriggerOnPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            OnPropertyChanged("Text");
+        }
+
         public CellBase(int column, int row)
         {
             RowIndex = row;

@@ -11,3 +11,16 @@ C:\Users\luke\Desktop\321repos\cs321-lbrossma\Spreadsheet\Spreadsheet\Spreadshee
 C:\Users\luke\Desktop\321repos\cs321-lbrossma\Spreadsheet\Spreadsheet\Spreadsheet\obj\Debug\Spreadsheet.csproj.CopyComplete
 C:\Users\luke\Desktop\321repos\cs321-lbrossma\Spreadsheet\Spreadsheet\Spreadsheet\obj\Debug\Spreadsheet.exe
 C:\Users\luke\Desktop\321repos\cs321-lbrossma\Spreadsheet\Spreadsheet\Spreadsheet\obj\Debug\Spreadsheet.pdb
+D:\Spreadsheet\Spreadsheet\Spreadsheet\bin\Debug\Spreadsheet.exe.config
+D:\Spreadsheet\Spreadsheet\Spreadsheet\bin\Debug\Spreadsheet.exe
+D:\Spreadsheet\Spreadsheet\Spreadsheet\bin\Debug\Spreadsheet.pdb
+D:\Spreadsheet\Spreadsheet\Spreadsheet\bin\Debug\SpreadsheetEngine.dll
+D:\Spreadsheet\Spreadsheet\Spreadsheet\bin\Debug\SpreadsheetEngine.pdb
+D:\Spreadsheet\Spreadsheet\Spreadsheet\obj\Debug\Spreadsheet.csprojAssemblyReference.cache
+D:\Spreadsheet\Spreadsheet\Spreadsheet\obj\Debug\Spreadsheet.Form1.resources
+D:\Spreadsheet\Spreadsheet\Spreadsheet\obj\Debug\Spreadsheet.Properties.Resources.resources
+D:\Spreadsheet\Spreadsheet\Spreadsheet\obj\Debug\Spreadsheet.csproj.GenerateResource.cache
+D:\Spreadsheet\Spreadsheet\Spreadsheet\obj\Debug\Spreadsheet.csproj.CoreCompileInputs.cache
+D:\Spreadsheet\Spreadsheet\Spreadsheet\obj\Debug\Spreadsheet.csproj.CopyComplete
+D:\Spreadsheet\Spreadsheet\Spreadsheet\obj\Debug\Spreadsheet.exe
+D:\Spreadsheet\Spreadsheet\Spreadsheet\obj\Debug\Spreadsheet.pdb

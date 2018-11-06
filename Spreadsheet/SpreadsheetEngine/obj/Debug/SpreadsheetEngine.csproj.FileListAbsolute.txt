@@ -4,3 +4,9 @@ C:\Users\luke\Desktop\321repos\cs321-lbrossma\Spreadsheet\Spreadsheet\Spreadshee
 C:\Users\luke\Desktop\321repos\cs321-lbrossma\Spreadsheet\Spreadsheet\SpreadsheetEngine\obj\Debug\SpreadsheetEngine.csproj.CoreCompileInputs.cache
 C:\Users\luke\Desktop\321repos\cs321-lbrossma\Spreadsheet\Spreadsheet\SpreadsheetEngine\obj\Debug\SpreadsheetEngine.dll
 C:\Users\luke\Desktop\321repos\cs321-lbrossma\Spreadsheet\Spreadsheet\SpreadsheetEngine\obj\Debug\SpreadsheetEngine.pdb
+D:\Spreadsheet\Spreadsheet\SpreadsheetEngine\obj\Debug\SpreadsheetEngine.csproj.CoreCompileInputs.cache
+D:\Spreadsheet\Spreadsheet\SpreadsheetEngine\bin\Debug\SpreadsheetEngine.dll
+D:\Spreadsheet\Spreadsheet\SpreadsheetEngine\bin\Debug\SpreadsheetEngine.pdb
+D:\Spreadsheet\Spreadsheet\SpreadsheetEngine\obj\Debug\SpreadsheetEngine.dll
+D:\Spreadsheet\Spreadsheet\SpreadsheetEngine\obj\Debug\SpreadsheetEngine.pdb
+D:\Spreadsheet\Spreadsheet\SpreadsheetEngine\obj\Debug\SpreadsheetEngine.csprojAssemblyReference.cache

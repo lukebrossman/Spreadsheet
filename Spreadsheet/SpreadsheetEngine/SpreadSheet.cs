@@ -10,6 +10,9 @@ namespace Cpts321
 {
     public class SpreadSheet
     {
+        private CellBase currentCell;
+        private ExpNodeBase expression { get; set; }
+        public Dictionary<string, double> CellValues { get; private set; }
         public int ColumnCount { get; private set; }
         public int RowCount { get; private set; }
         public CellBase[,] Cells { get; private set; }
@@ -17,6 +20,7 @@ namespace Cpts321
         public event PropertyChangedEventHandler CellPropertyChanged;
         public SpreadSheet(int columns, int rows)
         {
+            CellValues = new Dictionary<string, double> { };
             Cells = new CellBase[columns , rows];
             for(int row = 0; row < rows; row++)
             {
@@ -36,25 +40,44 @@ namespace Cpts321
         }
         private void Spreadsheet_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            var currentCell = (CellBase)sender;
-            var tempString = CalculateValue(currentCell.Text);
-            currentCell.Value = tempString;
-            CellPropertyChanged?.Invoke(sender, new PropertyChangedEventArgs("Value"));
+            try
+            {
+                currentCell = (CellBase)sender;
+                var tempString = CalculateValue(currentCell.Text);
+                var key = CoordToCellName(currentCell.ColumnIndex, currentCell.RowIndex);
+                try
+                {
+                    if (CellValues.ContainsKey(key))
+                    {
+                        CellValues[key] = Convert.ToDouble(tempString);
+                    }
+                    else
+                    {
+                    
+                        CellValues.Add(key, Convert.ToDouble(tempString));
+                    }
+                }
+                catch { }
+                currentCell.Value = tempString;
+                CellPropertyChanged?.Invoke(sender, new PropertyChangedEventArgs("Value"));
+            }
+            catch { }
         }
 
         private string CalculateValue(string text)
         {
+            string result;
             if (text[0] == '=')
             {
-                var rx = new Regex(@"\b[A-Z]{1}[0-9]+");
-                MatchCollection matches = rx.Matches(text);
-                CellBase newCell = GetAssignmentCell(matches[0].ToString());
-                return newCell.Value; 
+                ResetCurrentCellSubscription();
+                expression = ExpTreeFactory.CreateExpTree(text, this);
+                result = expression.Evaluate().ToString();
             }
             else
             {
-                return text;
+                result = text;
             }
+            return result;
         }
 
         public void Demo()
@@ -79,6 +102,31 @@ namespace Cpts321
             int column = cellName[0]- 65, row = 0;
             Int32.TryParse(cellName.Remove(0, 1), out row);
             return GetCell(column, row - 1);
+        }
+
+        private string CoordToCellName(int x, int y)
+        {
+            char letter = (char)(x + 65);
+            string result = letter + (y + 1).ToString();
+            return result;
+        }
+
+        public void LookUpCellValue(object sender, PropertyChangedEventArgs e)
+        {
+            var variable = (VariableNode)sender;
+            if (CellValues.ContainsKey(variable.value))
+            {
+                variable.varValue = CellValues[variable.value];
+                GetAssignmentCell(variable.value).PropertyChanged += currentCell.TriggerOnPropertyChanged;
+            }
+            else
+            {
+                throw new Exception("Cell unnassigned");
+            }
+        }
+
+        private void ResetCurrentCellSubscription()
+        {
         }
     }
 }

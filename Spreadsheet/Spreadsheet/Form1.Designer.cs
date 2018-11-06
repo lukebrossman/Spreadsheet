@@ -30,6 +30,7 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.demoBttn = new System.Windows.Forms.Button();
+            this.editCellTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,10 +43,11 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(778, 438);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.UpdateCellContents);
             // 
             // demoBttn
             // 
-            this.demoBttn.Location = new System.Drawing.Point(305, 6);
+            this.demoBttn.Location = new System.Drawing.Point(64, 6);
             this.demoBttn.Name = "demoBttn";
             this.demoBttn.Size = new System.Drawing.Size(75, 23);
             this.demoBttn.TabIndex = 1;
@@ -53,11 +55,20 @@
             this.demoBttn.UseVisualStyleBackColor = true;
             this.demoBttn.Click += new System.EventHandler(this.demoBttn_Click);
             // 
+            // editCellTextBox
+            // 
+            this.editCellTextBox.Location = new System.Drawing.Point(323, 8);
+            this.editCellTextBox.Name = "editCellTextBox";
+            this.editCellTextBox.Size = new System.Drawing.Size(230, 20);
+            this.editCellTextBox.TabIndex = 2;
+            this.editCellTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.editCellTextBox_KeyDown);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(802, 485);
+            this.Controls.Add(this.editCellTextBox);
             this.Controls.Add(this.demoBttn);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
@@ -65,6 +76,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -72,6 +84,7 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button demoBttn;
+        private System.Windows.Forms.TextBox editCellTextBox;
     }
 }
 

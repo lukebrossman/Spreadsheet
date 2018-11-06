@@ -9,25 +9,27 @@ namespace Cpts321
 {
     public static class ExpTreeFactory
     {
+        private static SpreadSheet _sender;
 
-        public static ExpNodeBase CreateExpTree(string expression,ref Dictionary<string, List<VariableNode>> Variables)
+        public static ExpNodeBase CreateExpTree(string expression, SpreadSheet sender)
         {
+            _sender = sender;
             Regex expRegex = new Regex(@"([A-Za-z]+[\d]*|[\+-/*\(\)]{1}|[\d]*\.?[\d]+)");
             MatchCollection matches = expRegex.Matches(expression);
-            return ExpressionToTree(matches,ref Variables);
+            var expressionList = ShuntingYard(matches);
+            return ExpressionToTree(expressionList);
 
         }
 
-        private static ExpNodeBase ExpressionToTree(MatchCollection matches,ref Dictionary<string, List<VariableNode>> Variables)
+        private static ExpNodeBase ExpressionToTree(Queue<string> expressionList)
         {
             Stack<ExpNodeBase> nodestack = new Stack<ExpNodeBase>{ };
-            var expressionList = ShuntingYard(matches);
             OperatorNode root = null;
             foreach(var value in expressionList)
             {
                 if (IsOperand(value))
                 {
-                    nodestack.Push(MakeLeaf(value, ref Variables));
+                    nodestack.Push(MakeLeaf(value));
                 }
                 else
                 {
@@ -88,24 +90,19 @@ namespace Cpts321
             return queue;
         }
 
-        private static ExpNodeBase MakeLeaf(string val, ref Dictionary<string, List<VariableNode>> Variables)
+        private static ExpNodeBase MakeLeaf(string val)
         {
             ExpNodeBase newNode;
+            VariableNode varNode;
             if (val[0] >= '0' && val[0] <= '9')
             {
                 newNode = new NumericalNode(val);
             }
             else
             {
-                newNode = new VariableNode(val);
-                if (Variables.ContainsKey(val))
-                {
-                    Variables[val].Add((VariableNode)newNode);
-                }
-                else
-                {
-                    Variables.Add(val, new List<VariableNode> { (VariableNode)newNode });
-                }
+                varNode = new VariableNode(val);
+                varNode.PropertyChanged += _sender.LookUpCellValue;
+                newNode = varNode;
             }
             return newNode;
         }

@@ -23,11 +23,12 @@ namespace Spreadsheet
         private void Form1_Load(object sender, EventArgs e)
         {
             sheet = new SpreadSheet(26, 50);
+            editCellTextBox.Enabled = false;
             sheet.CellPropertyChanged += Form1_CellPropertyChanged;
             InitDataGrid();
         }
 
-        private void InitDataGrid ()
+        private void InitDataGrid()
         {
             int rowNumber = 1;
             dataGridView1.Columns.Clear();
@@ -54,6 +55,29 @@ namespace Spreadsheet
         private void demoBttn_Click(object sender, EventArgs e)
         {
             sheet.Demo();
+        }
+
+        private void UpdateCellContents(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UpdateCellContents(object sender, DataGridViewCellEventArgs e)
+        {
+            editCellTextBox.Enabled = true;
+            editCellTextBox.Text = sheet.Cells[dataGridView1.CurrentCell.ColumnIndex,
+                    dataGridView1.CurrentCell.RowIndex].Text;
+        }
+
+        private void editCellTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                sheet.Cells[dataGridView1.CurrentCell.ColumnIndex,
+                    dataGridView1.CurrentCell.RowIndex].Text = editCellTextBox.Text; 
+                editCellTextBox.Enabled = false;
+                editCellTextBox.Clear();
+            }
         }
     }
 }

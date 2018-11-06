@@ -10,3 +10,14 @@ C:\Users\luke\Desktop\321repos\cs321-lbrossma\Spreadsheet\Spreadsheet\ConsoleTes
 C:\Users\luke\Desktop\321repos\cs321-lbrossma\Spreadsheet\Spreadsheet\ConsoleTestingApp\obj\Debug\ConsoleTestingApp.pdb
 C:\Users\luke\Desktop\321repos\cs321-lbrossma\Spreadsheet\Spreadsheet\ConsoleTestingApp\bin\Debug\System.ValueTuple.dll
 C:\Users\luke\Desktop\321repos\cs321-lbrossma\Spreadsheet\Spreadsheet\ConsoleTestingApp\bin\Debug\System.ValueTuple.xml
+D:\Spreadsheet\Spreadsheet\ConsoleTestingApp\obj\Debug\ConsoleTestingApp.csprojAssemblyReference.cache
+D:\Spreadsheet\Spreadsheet\ConsoleTestingApp\obj\Debug\ConsoleTestingApp.csproj.CoreCompileInputs.cache
+D:\Spreadsheet\Spreadsheet\ConsoleTestingApp\bin\Debug\ConsoleTestingApp.exe.config
+D:\Spreadsheet\Spreadsheet\ConsoleTestingApp\bin\Debug\ConsoleTestingApp.exe
+D:\Spreadsheet\Spreadsheet\ConsoleTestingApp\bin\Debug\ConsoleTestingApp.pdb
+D:\Spreadsheet\Spreadsheet\ConsoleTestingApp\bin\Debug\System.ValueTuple.dll
+D:\Spreadsheet\Spreadsheet\ConsoleTestingApp\bin\Debug\SpreadsheetEngine.dll
+D:\Spreadsheet\Spreadsheet\ConsoleTestingApp\bin\Debug\SpreadsheetEngine.pdb
+D:\Spreadsheet\Spreadsheet\ConsoleTestingApp\obj\Debug\ConsoleTestingApp.csproj.CopyComplete
+D:\Spreadsheet\Spreadsheet\ConsoleTestingApp\obj\Debug\ConsoleTestingApp.exe
+D:\Spreadsheet\Spreadsheet\ConsoleTestingApp\obj\Debug\ConsoleTestingApp.pdb

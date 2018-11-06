@@ -14,7 +14,7 @@ namespace Cpts321
         public ExpTree(string expression)
         {
             Variables = new Dictionary<string, List<VariableNode>> { };
-            expRoot = ExpTreeFactory.CreateExpTree(expression, ref Variables);
+            //expRoot = ExpTreeFactory.CreateExpTree(expression);
         }
         public void SetVar(string varName, double varValue)
         {
