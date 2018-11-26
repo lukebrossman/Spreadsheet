@@ -79,5 +79,10 @@ namespace Spreadsheet
                 editCellTextBox.Clear();
             }
         }
+
+        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

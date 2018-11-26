@@ -45,5 +45,10 @@ namespace Cpts321
             RowIndex = row;
             ColumnIndex = column;
         }
+
+        public void ClearSubscriptions()
+        {
+            PropertyChanged = null;
+        }
     }
 }

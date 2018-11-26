@@ -155,20 +155,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\culed\\.nuget\\packages\\": {}
+    "C:\\Users\\luke\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Spreadsheet\\Spreadsheet\\ConsoleTestingApp\\ConsoleTestingApp.csproj",
+      "projectUniqueName": "C:\\Users\\luke\\Desktop\\321repos\\cs321-lbrossma\\Spreadsheet\\Spreadsheet\\ConsoleTestingApp\\ConsoleTestingApp.csproj",
       "projectName": "ConsoleTestingApp",
-      "projectPath": "D:\\Spreadsheet\\Spreadsheet\\ConsoleTestingApp\\ConsoleTestingApp.csproj",
-      "packagesPath": "C:\\Users\\culed\\.nuget\\packages\\",
-      "outputPath": "D:\\Spreadsheet\\Spreadsheet\\ConsoleTestingApp\\obj\\",
+      "projectPath": "C:\\Users\\luke\\Desktop\\321repos\\cs321-lbrossma\\Spreadsheet\\Spreadsheet\\ConsoleTestingApp\\ConsoleTestingApp.csproj",
+      "packagesPath": "C:\\Users\\luke\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\luke\\Desktop\\321repos\\cs321-lbrossma\\Spreadsheet\\Spreadsheet\\ConsoleTestingApp\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\culed\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\luke\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -181,8 +181,8 @@
       "frameworks": {
         "net461": {
           "projectReferences": {
-            "D:\\Spreadsheet\\Spreadsheet\\SpreadsheetEngine\\SpreadsheetEngine.csproj": {
-              "projectPath": "D:\\Spreadsheet\\Spreadsheet\\SpreadsheetEngine\\SpreadsheetEngine.csproj"
+            "C:\\Users\\luke\\Desktop\\321repos\\cs321-lbrossma\\Spreadsheet\\Spreadsheet\\SpreadsheetEngine\\SpreadsheetEngine.csproj": {
+              "projectPath": "C:\\Users\\luke\\Desktop\\321repos\\cs321-lbrossma\\Spreadsheet\\Spreadsheet\\SpreadsheetEngine\\SpreadsheetEngine.csproj"
             }
           }
         }

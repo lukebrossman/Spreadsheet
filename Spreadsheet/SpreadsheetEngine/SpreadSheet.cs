@@ -99,7 +99,8 @@ namespace Cpts321
 
         private CellBase GetAssignmentCell(string cellName)
         {
-            int column = cellName[0]- 65, row = 0;
+            char firstLetter = cellName[0];
+            int column = firstLetter - 65, row = 0;
             Int32.TryParse(cellName.Remove(0, 1), out row);
             return GetCell(column, row - 1);
         }
@@ -114,10 +115,11 @@ namespace Cpts321
         public void LookUpCellValue(object sender, PropertyChangedEventArgs e)
         {
             var variable = (VariableNode)sender;
-            if (CellValues.ContainsKey(variable.value))
+            string cellName = variable.value.ToUpper();
+            if (CellValues.ContainsKey(cellName))
             {
-                variable.varValue = CellValues[variable.value];
-                GetAssignmentCell(variable.value).PropertyChanged += currentCell.TriggerOnPropertyChanged;
+                variable.varValue = CellValues[cellName];
+                GetAssignmentCell(cellName).PropertyChanged += currentCell.TriggerOnPropertyChanged;
             }
             else
             {
@@ -127,6 +129,8 @@ namespace Cpts321
 
         private void ResetCurrentCellSubscription()
         {
+            currentCell.ClearSubscriptions();
+            currentCell.PropertyChanged += Spreadsheet_PropertyChanged;
         }
     }
 }

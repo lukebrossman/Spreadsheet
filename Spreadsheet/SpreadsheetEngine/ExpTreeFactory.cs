@@ -14,7 +14,7 @@ namespace Cpts321
         public static ExpNodeBase CreateExpTree(string expression, SpreadSheet sender)
         {
             _sender = sender;
-            Regex expRegex = new Regex(@"([A-Za-z]+[\d]*|[\+-/*\(\)]{1}|[\d]*\.?[\d]+)");
+            Regex expRegex = new Regex(@"([a-zA-Z]+[\d]*|[\+-/*\(\)]{1}|[\d]*\.?[\d]+)");
             MatchCollection matches = expRegex.Matches(expression);
             var expressionList = ShuntingYard(matches);
             return ExpressionToTree(expressionList);
@@ -24,7 +24,8 @@ namespace Cpts321
         private static ExpNodeBase ExpressionToTree(Queue<string> expressionList)
         {
             Stack<ExpNodeBase> nodestack = new Stack<ExpNodeBase>{ };
-            OperatorNode root = null;
+            ExpNodeBase root = null;
+            OperatorNode opNode;
             foreach(var value in expressionList)
             {
                 if (IsOperand(value))
@@ -33,12 +34,16 @@ namespace Cpts321
                 }
                 else
                 {
-                    root = new OperatorNode(value);
-                    root.rightChild = nodestack.Pop();
-                    root.leftChild = nodestack.Pop();
+                    opNode = new OperatorNode(value);
+                    opNode.rightChild = nodestack.Pop();
+                    opNode.leftChild = nodestack.Pop();
+                    root = opNode;
                     nodestack.Push(root);
-
                 }
+            }
+            if(nodestack.Count == 1 && root == null)
+            {
+                root = nodestack.Pop();
             }
             return root;
         }

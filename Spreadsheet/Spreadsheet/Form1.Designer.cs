@@ -31,6 +31,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.demoBttn = new System.Windows.Forms.Button();
             this.editCellTextBox = new System.Windows.Forms.TextBox();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,7 +49,7 @@
             // 
             // demoBttn
             // 
-            this.demoBttn.Location = new System.Drawing.Point(64, 6);
+            this.demoBttn.Location = new System.Drawing.Point(585, 5);
             this.demoBttn.Name = "demoBttn";
             this.demoBttn.Size = new System.Drawing.Size(75, 23);
             this.demoBttn.TabIndex = 1;
@@ -68,6 +70,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(802, 485);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.editCellTextBox);
             this.Controls.Add(this.demoBttn);
             this.Controls.Add(this.dataGridView1);
@@ -85,6 +88,8 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button demoBttn;
         private System.Windows.Forms.TextBox editCellTextBox;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.StatusStrip statusStrip1;
     }
 }
 
